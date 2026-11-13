@@ -1,0 +1,28 @@
+<div style="paddig: 40px; display: flex; justify-content: center">
+  @if (alumnoSeleccionado) {
+    <mat-card style="width: 100%; max-width: 500px">
+      <mat-card-header>
+        <mat-card-title>Id Alumno: {{ alumnoSeleccionado.id_alumno }}</mat-card-title>
+        <mat-card-subtitle>{{ alumnoSeleccionado.facultad }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-content style="padding-top: 20px; font-size: 1.1rem">
+        <p><strong>Estudiante: </strong>{{ alumnoSeleccionado.nombre_completo }}</p>
+        <p [style.color]="alumnoSeleccionado.promedio_ponderado < 10.5 ? 'red' : 'green'">
+          <strong>Promedio Ponderado: </strong>{{ alumnoSeleccionado.promedio_ponderado }}
+        </p>
+        <p><strong>Estado Académico: </strong>{{ alumnoSeleccionado.estado_academico }}</p>
+        <p><strong>Condición Beca: </strong>{{ alumnoSeleccionado.condicion_beca }}</p>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <<button mat-stroked-button color="accent" routerLink="/">Volver a Home</button>
+      </mat-card-actions>
+    </mat-card>
+  } @else {
+    <h2>El alumno no existe es los registros</h2>
+    <button mat-raised-button routerLink="/">Volver al inicio</button>
+  }
+</div>

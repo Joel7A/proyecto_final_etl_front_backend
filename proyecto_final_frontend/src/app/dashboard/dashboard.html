@@ -1,0 +1,30 @@
+<div style="padding: 30px; max-width: 1000px; margin: 0 auto">
+  <h2 style="text-align: center; font-family: Roboto, sans-serif; margin-bottom: 30px">
+    Analítica Académica (Universidad)
+  </h2>
+
+  <!-- grafico barras -->
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center">
+    <mat-card style="flex: 1; min-width: 400px">
+      <mat-card-header>
+        <mat-card-title>Distribución de Alumnos por Facultad</mat-card-title>
+        <mat-card-subtitle>(Volumen de matriculas procesadas)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="padding-top: 20px">
+        <canvas #graficoBarras></canvas>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Grafico Donas -->
+
+    <mat-card style="flex: 1; min-width: 300px; max-width: 400px; margin-top: 20px">
+      <mat-card-header>
+        <mat-card-title>Estado de Salud Académica</mat-card-title>
+        <mat-card-subtitle>(Campo calculado: estado_academico)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content style="padding-top: 20px">
+        <canvas #graficoTorta></canvas>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

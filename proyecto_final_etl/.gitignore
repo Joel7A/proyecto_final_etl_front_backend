@@ -1,0 +1,23 @@
+# Entorno virtual
+venv/
+
+# Caché y compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Reportes de pruebas y cobertura
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Datos locales
+*.csv
+
+# Credenciales y configuración sensible
+config.json
+
+# Editores y sistema operativo
+.vscode/
+.idea/
+.DS_Store
